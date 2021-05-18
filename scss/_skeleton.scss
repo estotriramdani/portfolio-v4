@@ -64,13 +64,25 @@
   animation-delay: 0.4s;
 }
 
+@media screen and (max-width: 768px) {
+  .skeleton-detail-img {
+    height: 36vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skeleton-detail-img {
+    height: 21vh;
+  }
+}
+
 // skeleton keyframes
 @keyframes splash {
   0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.3;
   }
   100% {
     opacity: 1;

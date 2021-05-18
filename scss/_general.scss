@@ -86,6 +86,7 @@ body {
 }
 
 .double-column {
+  transition: 0.3s;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 10px;
