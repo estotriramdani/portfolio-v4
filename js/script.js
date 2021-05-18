@@ -1,8 +1,11 @@
 const navItem = document.querySelectorAll('.nav-item');
 const navMenu = document.querySelector('.nav');
-const showItems = document.querySelector('.showItems');
 const items = document.querySelector('.items');
-const content = document.querySelector('.content');
+const itemsCard = document.querySelector('.items-card');
+
+itemsCard.addEventListener('click', () => {
+  alert('k');
+});
 
 navMenu.addEventListener('click', (e) => {
   if (e.target.className == 'nav-item') {
@@ -11,9 +14,4 @@ navMenu.addEventListener('click', (e) => {
     });
     e.target.classList.add('nav-item-active');
   }
-});
-
-showItems.addEventListener('click', () => {
-  items.classList.add('slideDownItems');
-  // content.style.padding = '0';
 });
