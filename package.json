@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-v4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estotriramdani/portfolio-v4.git"
+  },
+  "author": "estotriramdani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estotriramdani/portfolio-v4/issues"
+  },
+  "homepage": "https://github.com/estotriramdani/portfolio-v4#readme"
+}
