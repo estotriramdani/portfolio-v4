@@ -1,14 +1,14 @@
 const itemsCard = (card) => {
-  return `<div class="items-card" id="${card.id}" onclick="alert(this.id)">
-  <div class="thumbnail">
-    <img src="${card.image}" alt="Image" />
+  return `<div class="items-card" id="${card.id}">
+  <div class="thumbnail" id="${card.id}">
+    <img src="${card.image}" alt="Image" id="${card.id}"/>
   </div>
-  <div class="detail">
-    <p class="title">${card.title}</p>
-    <p class="short-desc">
+  <div class="detail" id="${card.id}">
+    <p class="title" id="${card.id}">${card.title}</p>
+    <p class="short-desc" id="${card.id}">
       ${card.role}
     </p>
-    <p class="type">${card.type}</p>
+    <p class="type" id="${card.id}">${card.type}</p>
   </div>
 </div>`;
 };

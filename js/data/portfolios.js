@@ -1,6 +1,6 @@
 const portfolios = [
   {
-    id: 1,
+    id: 0,
     title: 'Daily Prayer App',
     role: 'Front-end Developer',
     type: 'Web Application/Reference',
@@ -10,7 +10,7 @@ const portfolios = [
     image: 'http://127.0.0.1:5500/img/img.jpg',
   },
   {
-    id: 2,
+    id: 1,
     title: 'EJ BOOKS Website',
     role: 'Full-stack Developer',
     type: 'Web Application',
