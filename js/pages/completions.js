@@ -1,12 +1,11 @@
-import portfolios from '../data/portfolios.js';
+import completions from '../data/completions.js';
 import { content } from '../dom-elements/index.js';
-
 import detailSkeleton from '../template/detail-skeleton.js';
-import { detailPortfolio } from '../template/detail.js';
+import { detailCompletion } from '../template/detail.js';
 import itemsCardSkeleton from '../template/items-card-skeleton.js';
-import { itemsCardPortfolios } from '../template/items-card.js';
+import { itemsCardCompletions } from '../template/items-card.js';
 
-const portfoliosPage = () => {
+const completionsPage = () => {
   const items = document.querySelector('.items');
   const detail = document.querySelector('.detail');
 
@@ -18,12 +17,12 @@ const portfoliosPage = () => {
 
     // set items di menu
     items.innerHTML = '';
-    portfolios.forEach((p) => {
-      items.innerHTML += itemsCardPortfolios(p);
+    completions.forEach((p) => {
+      items.innerHTML += itemsCardCompletions(p);
     });
 
     // TO DO: tampilkan detail
-    detail.innerHTML = detailPortfolio(portfolios[0]);
+    detail.innerHTML = detailCompletion(completions[2]);
 
     // seleksi card
     const cards = document.querySelectorAll('.items-card');
@@ -32,11 +31,11 @@ const portfoliosPage = () => {
         const id = parseInt(e.target.id);
         detail.innerHTML = detailSkeleton;
         setTimeout(() => {
-          detail.innerHTML = detailPortfolio(portfolios[id]);
+          detail.innerHTML = detailCompletion(completions[id]);
         }, 1000);
       });
     });
   }, 1000);
 };
 
-export default portfoliosPage;
+export default completionsPage;

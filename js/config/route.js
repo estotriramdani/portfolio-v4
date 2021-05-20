@@ -7,6 +7,7 @@ import {
   portfoliosNavigation,
   tutorialsNavigation,
 } from '../dom-elements/index.js';
+import completionsPage from '../pages/completions.js';
 import portfoliosPage from '../pages/portfolios.js';
 import doubleColumn from '../template/double-column.js';
 import activeNav from '../utils/active-nav.js';
@@ -17,19 +18,26 @@ const router = () => {
       content.style.overflow = 'hidden';
       switch (e.target.id) {
         case 'portfolios':
+          activeNav(portfoliosNavigation);
           doubleColumn();
           portfoliosPage();
+
           break;
         case 'completions':
+          activeNav(completionsNavigation);
           doubleColumn();
+          completionsPage();
           break;
         case 'experiences':
+          activeNav(experiencesNavigation);
           doubleColumn();
           break;
         case 'tutorials':
+          activeNav(tutorialsNavigation);
           doubleColumn();
           break;
         default:
+          activeNav(homeNavigation);
           console.log('home pgae');
           break;
       }
@@ -45,8 +53,10 @@ const routes = () => {
       activeNav(portfoliosNavigation);
       break;
     case '/completions':
-      activeNav(completionsNavigation);
       doubleColumn();
+      completionsPage();
+      activeNav(completionsNavigation);
+
       break;
     case '/experiences':
       activeNav(experiencesNavigation);
@@ -76,8 +86,9 @@ const hashWatcher = () => {
         activeNav(portfoliosNavigation);
         break;
       case '/completions':
-        activeNav(completionsNavigation);
         doubleColumn();
+        completionsPage();
+        activeNav(completionsNavigation);
         break;
       case '/experiences':
         activeNav(experiencesNavigation);

@@ -19,4 +19,23 @@ const detailPortfolio = (p) => {
   </div>
   `;
 };
-export default detailPortfolio;
+
+const detailCompletion = (c) => {
+  return `
+  <div class="cover-img">
+    <img src="${c.image}" alt="">
+  </div>
+  <div class="detail__body" style="padding-left: 10px;">
+    <h3 class="detail__body__title">${c.name}</h3>
+    <div class="detail__body__subtitle">
+      <p>${c.institution}</p>
+      <p>${c.date}</p>
+    </div>
+    <div class="detail__body__more-description">
+      <p>Link: <a target="_blank" href="${c.link}">Click Me</a></p>
+    </div>
+  </div>
+  `;
+};
+
+export { detailPortfolio, detailCompletion };

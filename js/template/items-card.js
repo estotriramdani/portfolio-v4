@@ -1,7 +1,7 @@
-const itemsCard = (card) => {
+const itemsCardPortfolios = (card) => {
   return `<div class="items-card" id="${card.id}">
   <div class="thumbnail" id="${card.id}">
-    <img src="${card.thumb}" alt="Image" id="${card.id}" />
+    <img src="${card.thumb}" alt="${card.title}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.title}</p>
@@ -13,4 +13,19 @@ const itemsCard = (card) => {
 </div>`;
 };
 
-export default itemsCard;
+const itemsCardCompletions = (card) => {
+  return `<div class="items-card" id="${card.id}">
+  <div class="thumbnail" id="${card.id}">
+    <img src="${card.thumb}" alt="${card.name}" id="${card.id}" />
+  </div>
+  <div class="detail" id="${card.id}">
+    <p class="title" id="${card.id}">${card.name}</p>
+    <p class="short-desc" id="${card.id}">
+      ${card.institution}
+    </p>
+    <p class="type" id="${card.id}">${card.date}</p>
+  </div>
+</div>`;
+};
+
+export { itemsCardPortfolios, itemsCardCompletions };

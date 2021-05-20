@@ -2,7 +2,7 @@ const completions = [
   {
     id: 0,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/bwa-laravel-vue-js.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/bwa-laravel-vue-js.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/bwa-laravel-vue-js.jpg',
     institution: 'BuildWith Angga',
@@ -13,7 +13,7 @@ const completions = [
   {
     id: 1,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dicoding-web-dasar.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dicoding-web-dasar.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dicoding-web-dasar.jpg',
     institution: 'Dicoding Academy',
@@ -24,7 +24,7 @@ const completions = [
   {
     id: 2,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dicoding-web-fundamental.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dicoding-web-fundamental.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dicoding-web-fundamental.jpg',
     institution: 'Dicoding Academy',
@@ -35,7 +35,7 @@ const completions = [
   {
     id: 3,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dicoding-dart.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dicoding-dart.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dicoding-dart.jpg',
     institution: 'Dicoding Academy',
@@ -46,7 +46,7 @@ const completions = [
   {
     id: 4,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dicoding-visualisasi-data.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dicoding-visualisasi-data.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dicoding-visualisasi-data.jpg',
     institution: 'Dicoding Academy',
@@ -57,7 +57,7 @@ const completions = [
   {
     id: 5,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dicoding-python.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dicoding-python.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dicoding-python.jpg',
     institution: 'Dicoding Academy',
@@ -68,7 +68,7 @@ const completions = [
   {
     id: 6,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dqlab-python-fundamental.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dqlab-python-fundamental.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dqlab-python-fundamental.jpg',
     institution: 'DQLab',
@@ -79,7 +79,7 @@ const completions = [
   {
     id: 7,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dqlab-introduction-ds-with-python.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dqlab-introduction-ds-with-python.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dqlab-introduction-ds-with-python.jpg',
     institution: 'DQLab',
@@ -90,7 +90,7 @@ const completions = [
   {
     id: 8,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/dqlab-data-wrangling.jpg',
+      'http://esto.my.id/files/images/certificates/thumb/dqlab-data-wrangling.jpg',
     thumb:
       'http://esto.my.id/files/images/certificates/thumb/dqlab-data-wrangling.jpg',
     institution: 'DQLab',
