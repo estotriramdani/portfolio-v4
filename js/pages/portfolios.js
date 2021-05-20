@@ -1,6 +1,6 @@
 import portfolios from '../data/portfolios.js';
 import { content } from '../dom-elements/index.js';
-import detailItem from '../template/detail-item.js';
+import detailPortfolio from '../template/detail-portfolio.js';
 import detailSkeleton from '../template/detail-skeleton.js';
 import itemsCardSkeleton from '../template/items-card-skeleton.js';
 import itemsCard from '../template/items-card.js';
@@ -22,7 +22,7 @@ const portfoliosPage = () => {
     });
 
     // TO DO: tampilkan detail
-    detail.innerHTML = detailItem(portfolios[1]);
+    detail.innerHTML = detailPortfolio(portfolios[0]);
 
     // seleksi card
     const cards = document.querySelectorAll('.items-card');
@@ -31,7 +31,7 @@ const portfoliosPage = () => {
         const id = parseInt(e.target.id);
         detail.innerHTML = detailSkeleton;
         setTimeout(() => {
-          detail.innerHTML = detailItem(portfolios[id]);
+          detail.innerHTML = detailPortfolio(portfolios[id]);
         }, 1000);
       });
     });

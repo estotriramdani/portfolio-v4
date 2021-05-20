@@ -1,6 +1,12 @@
-import { navItem, navMenu, content } from './dom-elements/index.js';
-import portfoliosPage from './pages/portfolios.js';
-import doubleColumn from './template/double-column.js';
+import { router, routes, hashWatcher } from './config/route.js';
+import {
+  navItem,
+  navMenu,
+  content,
+  head,
+  portfoliosNavigation,
+} from './dom-elements/index.js';
+import headInnerHTML from './template/head.js';
 
 navMenu.addEventListener('click', (e) => {
   if (e.target.className == 'nav-item') {
@@ -11,26 +17,23 @@ navMenu.addEventListener('click', (e) => {
   }
 });
 
-navItem.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    content.style.overflow = 'hidden';
-    switch (e.target.id) {
-      case 'portfolios':
-        doubleColumn();
-        portfoliosPage();
-        break;
-      case 'completions':
-        doubleColumn();
-        break;
-      case 'experiences':
-        doubleColumn();
-        break;
-      case 'tutorials':
-        doubleColumn();
-        break;
-      default:
-        console.log('home pgae');
-        break;
-    }
-  });
-});
+head[0].innerHTML += headInnerHTML;
+
+// open the first page based on hash
+routes();
+
+// navigate to a page when user click back/forward button
+hashWatcher();
+
+// navigate to a page when user click navigation
+router();
+
+switch (window.location.hash.substr(1)) {
+  case '/portfolios':
+    portfoliosNavigation.classList.add('nav-item-active');
+
+    break;
+
+  default:
+    break;
+}

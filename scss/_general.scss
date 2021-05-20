@@ -1,3 +1,4 @@
+@import 'mixin';
 @import 'variables';
 
 * {
@@ -50,6 +51,9 @@ body {
     color: $light;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    a {
+      text-decoration: none;
+    }
     .nav-item {
       height: 100%;
       width: 100%;
@@ -86,12 +90,23 @@ body {
 }
 
 .double-column {
-  transition: 0.3s;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 10px;
   position: relative;
   .items {
+    &::-webkit-scrollbar {
+      background-color: $white;
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $green;
+    }
+    padding: 10px 20px;
+
+    height: 90vh;
+    overflow-y: auto;
     &-card {
       cursor: pointer;
       margin-bottom: 10px;
@@ -102,11 +117,13 @@ body {
       grid-template-columns: 180px 1fr;
       background-color: $light;
       .thumbnail {
+        @include splash2;
         img {
           width: 100%;
         }
       }
       .detail {
+        @include splash2;
         padding-left: 10px;
         .title {
           color: $green;
@@ -147,12 +164,15 @@ body {
   }
   .detail {
     overflow-y: auto;
+    padding-top: 10px;
     .cover-img {
+      @include splash2;
       img {
         width: 100%;
       }
     }
     &__body {
+      @include splash2;
       padding: 10px 0px;
       color: $dark;
       &__title {
@@ -170,6 +190,12 @@ body {
       &__description {
         font-size: 0.95em;
         margin-bottom: 8px;
+      }
+      &__more-description {
+        margin-top: 10px;
+        p {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -204,5 +230,34 @@ body {
 
   .double-column {
     grid-template-columns: 1fr;
+  }
+
+  .items {
+    height: 40vh !important;
+    &::-webkit-scrollbar {
+      background-color: $white;
+      width: 3px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $green;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .items {
+    height: 100vw !important;
+  }
+}
+
+@keyframes splash2 {
+  0% {
+    transform: translateY(-2%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
