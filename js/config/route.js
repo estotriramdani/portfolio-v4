@@ -8,6 +8,7 @@ import {
   tutorialsNavigation,
 } from '../dom-elements/index.js';
 import completionsPage from '../pages/completions.js';
+import experiencesPage from '../pages/experiences.js';
 import portfoliosPage from '../pages/portfolios.js';
 import doubleColumn from '../template/double-column.js';
 import activeNav from '../utils/active-nav.js';
@@ -21,7 +22,6 @@ const router = () => {
           activeNav(portfoliosNavigation);
           doubleColumn();
           portfoliosPage();
-
           break;
         case 'completions':
           activeNav(completionsNavigation);
@@ -31,6 +31,7 @@ const router = () => {
         case 'experiences':
           activeNav(experiencesNavigation);
           doubleColumn();
+          experiencesPage();
           break;
         case 'tutorials':
           activeNav(tutorialsNavigation);
@@ -61,6 +62,7 @@ const routes = () => {
     case '/experiences':
       activeNav(experiencesNavigation);
       doubleColumn();
+      experiencesPage();
       break;
     case '/tutorials':
       activeNav(tutorialsNavigation);
@@ -91,11 +93,13 @@ const hashWatcher = () => {
         activeNav(completionsNavigation);
         break;
       case '/experiences':
-        activeNav(experiencesNavigation);
         doubleColumn();
+        experiencesPage();
+        activeNav(experiencesNavigation);
         break;
       case '/tutorials':
         activeNav(tutorialsNavigation);
+        doubleColumn();
         break;
       default:
         activeNav(homeNavigation);

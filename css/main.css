@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -14,6 +19,13 @@
   color: #303633 !important;
 }
 
+.card-active {
+  background-color: #303633 !important;
+  color: #ffffff !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 button {
   border: none;
   background-color: none;
@@ -21,7 +33,7 @@ button {
 
 body {
   background-color: #104547;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .showItems {
@@ -116,7 +128,15 @@ body {
   position: relative;
   height: 100%;
   padding: 10px;
-  overflow: auto;
+}
+
+.container .content::-webkit-scrollbar {
+  background: #ffffff;
+  width: 8px !important;
+}
+
+.container .content::-webkit-scrollbar-thumb {
+  background: #104547;
 }
 
 .double-column {
@@ -137,6 +157,7 @@ body {
 .double-column .items::-webkit-scrollbar {
   background-color: #ffffff;
   width: 10px;
+  border-radius: 2px;
 }
 
 .double-column .items::-webkit-scrollbar-thumb {
@@ -144,6 +165,8 @@ body {
 }
 
 .double-column .items-card {
+  border-radius: 5px;
+  overflow: hidden;
   cursor: pointer;
   margin-bottom: 10px;
   width: 100%;
@@ -155,6 +178,18 @@ body {
   -ms-grid-columns: 180px 1fr;
       grid-template-columns: 180px 1fr;
   background-color: #fafafa;
+}
+
+.double-column .items-card:hover {
+  background-color: #303633 !important;
+  color: #ffffff !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.double-column .items-card:hover .thumbnail {
+  -webkit-box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
 }
 
 .double-column .items-card .thumbnail {
@@ -177,10 +212,10 @@ body {
 }
 
 .double-column .items-card .detail .title {
-  color: #104547;
   font-size: 1em;
   font-weight: 500;
   margin-bottom: 5px;
+  margin-top: -5px;
 }
 
 .double-column .items-card .detail .short-desc,
@@ -223,11 +258,12 @@ body {
 }
 
 .double-column .detail {
-  overflow-y: auto;
   padding-top: 10px;
 }
 
 .double-column .detail .cover-img {
+  border-radius: 5px;
+  overflow: hidden;
   position: relative;
   -webkit-animation-name: splash2;
           animation-name: splash2;
@@ -242,8 +278,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.04)), to(rgba(0, 0, 0, 0.1)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.04)), to(rgba(0, 0, 0, 0.05)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.05));
 }
 
 .double-column .detail .cover-img img {
@@ -271,7 +307,7 @@ body {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 8px;
 }
 
@@ -294,6 +330,13 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .content::-webkit-scrollbar {
+    background: #104547;
+    width: 3px !important;
+  }
+  .content::-webkit-scrollbar-thumb {
+    background: #ffffff;
   }
   .nav-item span {
     display: none;

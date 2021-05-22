@@ -1,11 +1,11 @@
-import completions from '../data/completions.js';
+import experiences from '../data/experiences.js';
 import { content } from '../dom-elements/index.js';
 import detailSkeleton from '../template/detail-skeleton.js';
-import { detailCompletion } from '../template/detail.js';
+import { detailExperience } from '../template/detail.js';
 import itemsCardSkeleton from '../template/items-card-skeleton.js';
-import { itemsCardCompletions } from '../template/items-card.js';
+import { itemsCardExperiences } from '../template/items-card.js';
 
-const completionsPage = () => {
+const experiencesPage = () => {
   const items = document.querySelector('.items');
   const detail = document.querySelector('.detail');
 
@@ -17,12 +17,12 @@ const completionsPage = () => {
 
     // set items di menu
     items.innerHTML = '';
-    completions.forEach((p) => {
-      items.innerHTML += itemsCardCompletions(p);
+    experiences.forEach((p) => {
+      items.innerHTML += itemsCardExperiences(p);
     });
 
     // TO DO: tampilkan detail
-    detail.innerHTML = detailCompletion(completions[3]);
+    detail.innerHTML = detailExperience(experiences[0]);
 
     // seleksi card
     const cards = document.querySelectorAll('.items-card');
@@ -31,11 +31,11 @@ const completionsPage = () => {
         const id = parseInt(e.target.id);
         detail.innerHTML = detailSkeleton;
         setTimeout(() => {
-          detail.innerHTML = detailCompletion(completions[id]);
+          detail.innerHTML = detailExperience(experiences[id]);
         }, 1000);
       });
     });
   }, 1000);
 };
 
-export default completionsPage;
+export default experiencesPage;

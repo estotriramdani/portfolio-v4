@@ -12,6 +12,10 @@
   color: $dark !important;
 }
 
+.card-active {
+  @include active-card();
+}
+
 button {
   border: none;
   background-color: none;
@@ -19,7 +23,8 @@ button {
 
 body {
   background-color: $green;
-  font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .showItems {
   display: none;
@@ -85,10 +90,18 @@ body {
     }
   }
   .content {
+    &::-webkit-scrollbar {
+      background: $white;
+      width: 8px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $green;
+    }
+
     position: relative;
     height: 100%;
     padding: 10px;
-    overflow: auto;
   }
 }
 
@@ -101,16 +114,18 @@ body {
     &::-webkit-scrollbar {
       background-color: $white;
       width: 10px;
+      border-radius: 2px;
     }
 
     &::-webkit-scrollbar-thumb {
       background: $green;
     }
     padding: 10px 20px;
-
     height: 90vh;
     overflow-y: auto;
     &-card {
+      border-radius: 5px;
+      overflow: hidden;
       cursor: pointer;
       margin-bottom: 10px;
       width: 100%;
@@ -119,6 +134,12 @@ body {
       display: grid;
       grid-template-columns: 180px 1fr;
       background-color: $light;
+      &:hover {
+        @include active-card();
+        .thumbnail {
+          box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+        }
+      }
       .thumbnail {
         @include splash2;
         img {
@@ -128,11 +149,12 @@ body {
       .detail {
         @include splash2;
         padding-left: 10px;
+
         .title {
-          color: $green;
           font-size: 1em;
           font-weight: 500;
           margin-bottom: 5px;
+          margin-top: -5px;
         }
         .short-desc,
         .type {
@@ -166,9 +188,10 @@ body {
     }
   }
   .detail {
-    overflow-y: auto;
     padding-top: 10px;
     .cover-img {
+      border-radius: 5px;
+      overflow: hidden;
       position: relative;
       &::after {
         position: absolute;
@@ -180,7 +203,7 @@ body {
         background: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.04),
-          rgba(0, 0, 0, 0.1)
+          rgba(0, 0, 0, 0.05)
         );
       }
       @include splash2;
@@ -201,7 +224,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
-        font-size: 1.2em;
+        font-size: 1em;
         margin-bottom: 8px;
       }
       &__description {
@@ -221,6 +244,16 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column-reverse;
+  }
+  .content {
+    &::-webkit-scrollbar {
+      background: $green;
+      width: 3px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $white;
+    }
   }
   .nav {
     &-item {
