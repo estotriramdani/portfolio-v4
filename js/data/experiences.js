@@ -17,7 +17,7 @@ const expreiences = [
     type: 'Internship',
     image: 'http://esto.my.id/files/images/experiences/thumb/automateall.jpg',
     thumb: 'http://esto.my.id/files/images/experiences/thumb/automateall.jpg',
-    description: ``,
+    description: `I worked with team and updating Automate All website (landing page, course detail page, and course video page). I built them with Vanilla JavaScript for client-side scripting and for do some programming logics, and I used Sass (SCSS syntax) as CSS preprocessor to styled them.`,
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const expreiences = [
     type: 'Webinar',
     image: 'http://esto.my.id/files/images/experiences/thumb/edutational.jpg',
     thumb: 'http://esto.my.id/files/images/experiences/thumb/edutational.jpg',
-    description: ``,
+    description: `Edudational is a webinar event that held by BEM Sekolah Vokasi IPB in 2021. I was invited to be the one of its speaker. Slides of my presentation can be downloaded <a href="https://ipb.link/slide-edudutional" target="_blank">here</a>`,
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const expreiences = [
     type: 'Seasonal Event',
     image: 'http://esto.my.id/files/images/experiences/thumb/hardiknas.jpg',
     thumb: 'http://esto.my.id/files/images/experiences/thumb/hardiknas.jpg',
-    description: ``,
+    description: `I was the head of Design, Decoration, and Publication Division in this event. Me and my team did a regular meetings for brainstorming. The main job desc of this division is to do event branding, create some design (like poster, etc.), and design the stage the event.`,
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const expreiences = [
     type: 'Campuss Internal Organization',
     image: 'http://esto.my.id/files/images/experiences/thumb/bem.jpg',
     thumb: 'http://esto.my.id/files/images/experiences/thumb/bem.jpg',
-    description: ``,
+    description: `Pendidikan dan Keilmuan (Education and Science) is one of BEM (Excetuive Council of Student) Sekolah Vokasi IPB departement. This departement has main focus to develop student potential in education. I was holding a responsible to find student(s) as an indivual or as a group to write their idea(s) into paper for Program Kreativitas Mahasiswa (PKM).`,
   },
 ];
 

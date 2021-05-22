@@ -76,6 +76,11 @@
   }
 }
 
+.skeleton-splash {
+  animation: splash 2s infinite;
+  animation-delay: 0.4s;
+}
+
 // skeleton keyframes
 @keyframes splash {
   0% {

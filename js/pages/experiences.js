@@ -12,7 +12,9 @@ const experiencesPage = () => {
   detail.innerHTML = detailSkeleton;
   items.innerHTML = itemsCardSkeleton();
 
+  items.style.overflow = 'hidden';
   setTimeout(() => {
+    items.style.overflow = 'auto';
     content.style.overflow = 'auto';
 
     // set items di menu

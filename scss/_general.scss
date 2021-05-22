@@ -121,7 +121,7 @@ body {
       background: $green;
     }
     padding: 10px 20px;
-    height: 90vh;
+    height: 78vh;
     overflow-y: auto;
     &-card {
       border-radius: 5px;
@@ -292,6 +292,10 @@ body {
     &::-webkit-scrollbar-thumb {
       background: $green;
     }
+  }
+
+  .education-and-skills-splash {
+    display: none;
   }
 }
 

@@ -9,6 +9,7 @@ import {
 } from '../dom-elements/index.js';
 import completionsPage from '../pages/completions.js';
 import experiencesPage from '../pages/experiences.js';
+import homePage from '../pages/home.js';
 import portfoliosPage from '../pages/portfolios.js';
 import doubleColumn from '../template/double-column.js';
 import activeNav from '../utils/active-nav.js';
@@ -39,7 +40,8 @@ const router = () => {
           break;
         default:
           activeNav(homeNavigation);
-          console.log('home pgae');
+          doubleColumn();
+          homePage();
           break;
       }
     });
@@ -69,6 +71,7 @@ const routes = () => {
       break;
     default:
       activeNav(homeNavigation);
+      homePage();
       break;
   }
 };
@@ -103,6 +106,7 @@ const hashWatcher = () => {
         break;
       default:
         activeNav(homeNavigation);
+        homePage();
         break;
     }
   });

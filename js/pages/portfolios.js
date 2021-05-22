@@ -13,8 +13,11 @@ const portfoliosPage = () => {
   detail.innerHTML = detailSkeleton;
   items.innerHTML = itemsCardSkeleton();
 
+  items.style.overflow = 'hidden';
+
   setTimeout(() => {
     content.style.overflow = 'auto';
+    items.style.overflow = 'auto';
 
     // set items di menu
     items.innerHTML = '';

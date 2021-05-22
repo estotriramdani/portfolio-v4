@@ -7,6 +7,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -150,7 +153,7 @@ body {
 
 .double-column .items {
   padding: 10px 20px;
-  height: 90vh;
+  height: 78vh;
   overflow-y: auto;
 }
 
@@ -369,6 +372,9 @@ body {
   .items::-webkit-scrollbar-thumb {
     background: #104547;
   }
+  .education-and-skills-splash {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -495,6 +501,13 @@ body {
   }
 }
 
+.skeleton-splash {
+  -webkit-animation: splash 2s infinite;
+          animation: splash 2s infinite;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
 @-webkit-keyframes splash {
   0% {
     opacity: 1;
@@ -516,6 +529,163 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.subtitle {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.subtitle::after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  background-color: #104547;
+}
+
+.subtitle h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.home-page {
+  color: #104547;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.home-page .personal-info {
+  padding: 40px;
+}
+
+.home-page .personal-info .profile {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page .personal-info .profile .photo {
+  width: 170px;
+  overflow: hidden;
+}
+
+.home-page .personal-info .profile .photo img {
+  border: 2px solid #303633;
+  height: 100%;
+  border-radius: 85px;
+  width: 100%;
+}
+
+.home-page .personal-info .profile .detail {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+
+.home-page .personal-info .profile .detail .name {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.home-page .personal-info .profile .detail .profession {
+  font-size: 1.05em;
+}
+
+.home-page .personal-info .profile .detail ul {
+  list-style: none;
+}
+
+.home-page .personal-info .self-description {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.home-page .personal-info .social-media {
+  padding: 10px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home-page .personal-info .social-media a {
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 22px;
+  line-height: 44px;
+  background-color: #303633;
+  font-size: 20px;
+  color: #fafafa;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.home-page .personal-info .social-media a:hover {
+  text-decoration: none;
+  color: #303633;
+  background-color: #fafafa;
+  border: 1.5px solid #303633;
+}
+
+.home-page .education-and-skills .education {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.home-page .education-and-skills .education__detail__institution {
+  font-size: 1.3em;
+  font-weight: 600px;
+}
+
+.home-page .more {
+  padding-right: 40px;
+  text-align: right;
+}
+
+.home-page .more a {
+  text-decoration: none;
+  padding: 20px 30px;
+  display: inline-block;
+  color: #fafafa;
+  background-color: #303633;
+}
+
+@media (max-width: 786px) {
+  .home-page {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .education-and-skills {
+    margin-top: -20px;
+    padding: 0 40px 30px 40px;
+  }
+  .more {
+    padding-bottom: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
